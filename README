@@ -2,3 +2,17 @@ Mock University and related templates and tools
 
 This project is intended to provide basic requirements every university or
 college should define to utilize a project following MockU coding standards.
+
+=========== DIRECTORIES =============
+
+www/
+This directory contains web-related files. HTML, JS, CSS etc.
+
+Requirements for web templates:
+
+* HTML5 coding standards
+* jQuery available as jQuery, $, or vendor.jQuery eg, UNL.jQuery
+* Fixed-width html are minimum 960 pixels wide
+* Grid system for content regions
+* Simple CSS reset will be applied to all pages
+* Navigation is in plain ol or ul tags with anchors on all elements
