@@ -47,7 +47,7 @@ body {
         font-family: @standardFont;
         letter-spacing: -0.05em;
         line-height: 140%;
-        .inset_text_shadow(#fff);
+        .text-shadow(#fff, -1px);
         color: lighten(#000, 25%);
     }
     
@@ -65,7 +65,7 @@ body {
                 letter-spacing: -0.05em;
                 line-height: 1em;
                 color: #fff;
-                .inset_text_shadow(darken(@primaryColor, 5%);
+                .text-shadow(darken(@primaryColor, 5%), -1px);
             }
             h2 {
                 font-size: 0.9em;
@@ -129,7 +129,7 @@ body {
                         padding: 5px;
                         text-align: center;
                         display: block;
-                        .text_shadow(@primaryColor);
+                        .text-shadow(@primaryColor);
                         & :hover {
                             background-color: @primaryColor;
                         }
@@ -167,7 +167,7 @@ body {
         width: @contentWidth;
         margin: 0 auto;
         background: #fff;
-        .box_shadow(0px, 0px, 20px, #888);
+        .box-shadow(0px, 0px, 20px, #888);
         border-top: 32px solid lighten(@primaryColor, 8%);
         margin-top: -32px;
         padding: 1em 0 3em 0;

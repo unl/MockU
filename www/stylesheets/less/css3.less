@@ -5,17 +5,17 @@
 */
 
 /*Border Radius Functions*/
-.border_radius(@radius: 10px)
+.border-radius(@radius: 10px)
 {
-	.border_radius(@radius, @radius);
+	.border-radius(@radius, @radius);
 }
 
-.border_radius(@radius_top, @radius_bottom)
+.border-radius(@radius_top, @radius_bottom)
 {
-	.border_radius(@radius_top, @radius_top, @radius_bottom, @radius_bottom);
+	.border-radius(@radius_top, @radius_top, @radius_bottom, @radius_bottom);
 }
 
-.border_radius(@radius_top_left, @radius_top_right, @radius_bottom_right, @radius_bottom_left)
+.border-radius(@radius_top_left, @radius_top_right, @radius_bottom_right, @radius_bottom_left)
 {
 	-webkit-border-radius:@radius_top_left @radius_top_right @radius_bottom_right @radius_bottom_left;
 	-moz-border-radius:@radius_top_left @radius_top_right @radius_bottom_right @radius_bottom_left;
@@ -23,19 +23,19 @@
 }
 
 /*Shadows*/
-.box_shadow(@shadow_x:3px, @shadow_y:3px, @shadow_rad:3px, @shadow_color:#888)
+.box-shadow(@shadow_x:3px, @shadow_y:3px, @shadow_rad:3px, @shadow_color:#888)
 {
 	box-shadow: @shadow_x @shadow_y @shadow_rad @shadow_color;
 	-webkit-box-shadow:@shadow_x @shadow_y @shadow_rad @shadow_color;
 	-moz-box-shadow:@shadow_x @shadow_y @shadow_rad @shadow_color;
 }
 
-.text_shadow(@shadow_color:#fff)
+.text-shadow(@shadow_color:#fff, @inset:1px)
 {
-	text-shadow:0 1px 0 @shadow_color;
+	text-shadow:@inset @inset 1px @shadow_color;
 }
 
-.inset_text_shadow(@shadow_color:#fff)
+.text-shadow_inset(@shadow_color:#fff)
 {
 	text-shadow:-1px -1px 1px @shadow_color;
 }
@@ -46,7 +46,7 @@
 	opacity: @op/100;
 }
 
-.background_gradient(@from:#000, @to:#EEE)
+.linear-gradient(@from:#000, @to:#EEE)
 {
 	background: @from; /* Old browsers */
 	background: -webkit-gradient(linear, left top, left bottom, from(@from), to(@to)); /* Chrome, Safari4+ */
