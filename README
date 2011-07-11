@@ -16,3 +16,6 @@ Requirements for web templates:
 * Grid system for content regions
 * Simple CSS reset will be applied to all pages
 * Navigation is in plain ol or ul tags with anchors on all elements
+
+Demo available at:
+http://unl.github.com/MockU/www/
