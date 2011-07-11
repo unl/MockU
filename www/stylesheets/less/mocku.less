@@ -1,0 +1,224 @@
+/*
+*
+* CSS Specific to the presentation of the MockU template only
+*
+*/
+
+/* Bring in vendor-specific rules */
+@import 'css3.less';
+
+/* Define constants */
+
+@primaryColor : #44AA55;
+@negativeColor: #F1F1F1;
+@secondaryColor: #DFDFCB;
+
+@contentWidth: 1008px;
+
+@standardFont: Helvetica, Arial, FreeSans, "Liberation Sans", "Nimbus Sans L", sans-serif;
+@serifFont: 'EB Garamond', Palatino,"Palatino Linotype",Palladio,"URW Palladio L","Book Antiqua","Liberation Serif",Times,serif;
+
+/* Don't edit the CSS file, instead use the LESS CSS file, less/mocku.less */
+body { 
+    font: 1em/1.4em @standardFont; 
+    color: #303030;
+    background: @negativeColor;
+    
+    .inner {
+        width: @contentWidth;
+        margin: 0 auto;
+    }
+    
+    a {
+        color: @primaryColor;
+        text-decoration: none;
+        & :hover {
+            text-decoration: underline;
+        }
+    }
+    
+    p {
+        margin: 0 0 1em 0;
+        line-height: 1.6em;
+        font-family: @standardFont;
+    }
+    
+    h3, h4, h5, h6 {
+        font-family: @standardFont;
+        letter-spacing: -0.05em;
+        line-height: 140%;
+        .inset_text_shadow(#fff);
+        color: lighten(#000, 25%);
+    }
+    
+    > header {
+        background: @primaryColor;
+        padding: 1em 0 0;
+        
+        hgroup {
+            margin: 0.5em 0 1em 0;
+        
+            h1 {
+                font-size: 5em;
+                font-weight: 800;
+                font-family: @serifFont;
+                letter-spacing: -0.05em;
+                line-height: 1em;
+                color: #fff;
+                .inset_text_shadow(darken(@primaryColor, 5%);
+            }
+            h2 {
+                font-size: 0.9em;
+                font-style: italic;
+                color: lighten(@primaryColor, 30%);
+            }
+        
+        }
+        
+        nav {
+        
+            a {
+                text-decoration: none;
+            }
+        
+            #breadcrumbs {
+                
+                li {
+                    display: inline;
+                    font-size: 0.75em;
+                    color: lighten(@primaryColor, 50%);
+                    & :after {
+                        content: ' > ';
+                    }
+                    & :last-child {
+                        & :after {
+                            content: '';
+                        }
+                    }
+                    
+                    a {
+                        color: lighten(@primaryColor, 50%);
+                    }
+                }
+            }
+            
+            #navigation {
+                color: #fff;
+                display: inline-block;
+                width: 100%;
+                margin: 5px 0 -7px 0;
+                & :hover {
+                    
+                    ul {
+                        display: block;
+                    }
+                }
+                
+                a {
+                    color: #fff;
+                }
+                
+                > li {
+                    display: inline;
+                    float: left;
+                    position: relative;
+                    width: @contentWidth/6;
+                    top: -1px;
+                    
+                    > a {
+                        padding: 5px;
+                        text-align: center;
+                        display: block;
+                        .text_shadow(@primaryColor);
+                        & :hover {
+                            background-color: @primaryColor;
+                        }
+                        
+                    }
+                    
+                    > ul {
+                        position: absolute;
+                        top: 100%;
+                        display: none;
+                        width: 100%;
+                        background: fadeout(@negativeColor, 5%);
+                        border-bottom: 2px solid darken(@negativeColor, 20%);
+                        font-size: 0.85em;
+                        
+                        li {
+                            margin: 3px 8px;
+                            border-bottom: 1px dashed lighten(#303030, 60%);
+                            & :last-of-type {
+                                border-bottom: 0;
+                            }
+                            
+                            a {
+                                color: lighten(#303030, 40%);
+                            }
+                        }
+                    }
+                    
+                }
+            }
+        }
+    }
+    
+    #maincontent {
+        width: @contentWidth;
+        margin: 0 auto;
+        background: #fff;
+        .box_shadow(0px, 0px, 20px, #888);
+        border-top: 32px solid lighten(@primaryColor, 8%);
+        margin-top: -32px;
+        padding: 1em 0 3em 0;
+        
+        > .clear {
+            clear: both;
+        }
+        
+        h3, h4, h5 {
+            font-size: 3em;
+            font-weight: bold;
+        }
+        
+        h4 {
+            font-size: 2.5em;
+        }
+        
+        h5 {
+            font-size: 2em;
+        }
+        
+        ul {
+            padding-left: 25px;
+            
+            span {
+                font-size: 0.75em;
+            }
+        }
+        
+        section {
+            margin: 0 24px;
+            padding: 3em 0;
+            display: inline-block;
+            border-bottom: 3px dashed @negativeColor;
+            
+            .more {
+                margin-top: 4em;
+                display: inline-block;
+            }
+        }
+    }
+    
+    > footer {
+        color: darken(@negativeColor, 40%);
+        margin: 3em 0;
+        font-size: 0.85em;
+        
+        #html5Badge {
+            float: right;
+            margin-left: 2em;
+        }
+    }
+} 
+.hidden {display:none;}
