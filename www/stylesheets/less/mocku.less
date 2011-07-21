@@ -32,7 +32,7 @@ body {
     a {
         color: @primaryColor;
         text-decoration: none;
-        & :hover {
+        &:hover {
             text-decoration: underline;
         }
     }
@@ -87,11 +87,11 @@ body {
                     display: inline;
                     font-size: 0.75em;
                     color: lighten(@primaryColor, 50%);
-                    & :after {
+                    &:after {
                         content: ' > ';
                     }
-                    & :last-child {
-                        & :after {
+                    &:last-child {
+                        &:after {
                             content: '';
                         }
                     }
@@ -107,7 +107,7 @@ body {
                 display: inline-block;
                 width: 100%;
                 margin: 5px 0 -7px 0;
-                & :hover {
+                &:hover {
                     
                     ul {
                         display: block;
@@ -130,7 +130,7 @@ body {
                         text-align: center;
                         display: block;
                         .text-shadow(@primaryColor);
-                        & :hover {
+                        &:hover {
                             background-color: @primaryColor;
                         }
                         
@@ -148,7 +148,7 @@ body {
                         li {
                             margin: 3px 8px;
                             border-bottom: 1px dashed lighten(#303030, 60%);
-                            & :last-of-type {
+                            &:last-of-type {
                                 border-bottom: 0;
                             }
                             
